@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends "blog_app/base.html" %}
+{% block body_block %}
+<h1>New Comment</h1>
+<form class="post-form" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" class='btn btn-primary loader' value="Post Comment">
+</form>
+
+<script>var editor = new MediumEditor('.editale');</script>
+{% endblock %}
